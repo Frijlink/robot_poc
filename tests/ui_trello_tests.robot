@@ -1,5 +1,5 @@
 *** Settings ***
-Resource    ../keywords/ui_keywords.robot
+Resource    ../keywords/ui_keywords.resource
 
 *** Variables ***
 ${BOARD_NAME}    Uuid 4
