@@ -1,5 +1,6 @@
 *** Settings ***
 Resource    ../resources/ui_keywords.resource
+Library    FakerLibrary
 
 *** Variables ***
 ${BOARD_NAME}    Uuid 4

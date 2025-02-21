@@ -1,5 +1,5 @@
 *** Settings ***
-Library   Browser
+Library    Browser
 Variables    ../ENV.py
 
 *** Keywords ***
@@ -31,6 +31,8 @@ Update Board
     Keyboard Key    press    Enter
 
 Close Board
+    ${IsElementVisible}=  Get Element States    data-testid=ad-container    then    bool(value & visible)
+    Run Keyword If    ${IsElementVisible}  Click    data-testid=RemoveIcon
     Hover    css=[aria-label*="(currently active)"]
     Click    css=[aria-label="Board actions menu"]
     Click    css=[aria-label="Close board"]
