@@ -2,6 +2,7 @@
 Library    FakerLibrary
 Library    ../resources/ApiLibrary.py
 Variables    ../ENV.py
+Test Teardown    Teardown: Delete all boards
 
 *** Variables ***
 ${ORGANIZATION_ID}
