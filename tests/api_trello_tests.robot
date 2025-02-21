@@ -2,6 +2,7 @@
 Library    FakerLibrary
 Library    ../resources/ApiLibrary.py
 Variables    ../ENV.py
+Test Teardown    Teardown: Delete all boards
 
 *** Variables ***
 ${ORGANIZATION_ID}
@@ -11,7 +12,7 @@ ${PERMISSION_LEVEL}    org
 ${UPDATED_PERMISSION_LEVEL}    private
 
 *** Test Cases ***
-Create and delete Trello board
+Create and delete Trello board through API
     ${ORGANIZATION_ID}    Get OrganizationId
     ${BOARD_NAME}    Uuid 4
     ${UPDATED_BOARD_NAME}    Uuid 4
